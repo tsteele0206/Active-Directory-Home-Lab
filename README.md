@@ -16,32 +16,32 @@ Project consists of a simple PowerShell script that walks the user through "zero
 
 - <b>Windows 10</b> (21H2)
 - <b>Windows Server 2019</b> (21H2)
-<h2>Program walk-through:</h2>
+<h2>Lab walk-through:</h2>
 
 <p align="center">
-Download and Install Oracle Virtual Box <br/>
+Download and Install Oracle Virtual Box. <br/>
 <img src="https://i.imgur.com/hla54vK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <p align="center">
-Download an ISO for Windows 10 <br/>
+Download an ISO for Windows 10. <br/>
 <img src="https://i.imgur.com/39FgOBt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <p align="center">
- Download an ISO for Windows Server 2019  <br/>
+ Download an ISO for Windows Server 2019.  <br/>
 <img src="https://i.imgur.com/omzwuPD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Create a VM for both the domain controller (Windows Server 2019) as well as a Windows client (Windows 10) and allocate appropriate resources to both <br/>
+Create a VM for both the domain controller (Windows Server 2019) as well as a Windows client (Windows 10) and allocate appropriate resources to both. <br/>
 <img src="https://i.imgur.com/3zMBWme.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-In the Network Settings for the Domain Controller, activate 2 adapters. On the first adapter, configure for NAT as this will be facing the internet. On adapter 2, configure for internal network, as this will be the adapter for the internal network  <br/>
+In the Network Settings for the Domain Controller, activate 2 adapters. On the first adapter, configure for NAT as this will be facing the internet. On adapter 2, configure for internal network, as this will be the adapter for the internal network.  <br/>
 <img src="https://i.imgur.com/s9A09pq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
+Open your domain controller and run through the Windows setup process.  <br/>
 <img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -49,18 +49,35 @@ When you try to navigate on the domain controller, you will notice that the VM w
 <img src="https://i.imgur.com/xnFGdMT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
- Open your domain controller and run through the Windows setup process  <br/>
+ Navigate to Network Connections via Control Panel > Network and Internet > Network Connections. This should show 2 network adapters. Right click on both and go to "Status" to find the adapter configured with the APIPA address. Rename this adapter as the internal network. The other adapter can be named for the external internet.  <br/>
+<img src="https://i.imgur.com/ETUT1mB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+ Rename the computer "DC" in the system settings  <br/>
+<img src="https://i.imgur.com/63vNhce.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Now its time to configure IP addressing for the internal network adapter. Go back to Network Connections and select "Properties". Then select IPv4 and hit "Properties". Select "Use the following address" to configure a static IP address. I selected 172.16.0.1 as this is a private address different from the range on my external router. Set the subnet mask to 255.255.255.0. The Default Gateway can be left blank as this host will act as the default gateway once Active Directory is installed. The DNS server address can either be set to our own IP address or the loopback address (127.0.0.1)  <br/>
+<img src="https://i.imgur.com/8pAzWPA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Open your domain controller and run through the Windows setup process  <br/>
 <img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
- Open your domain controller and run through the Windows setup process  <br/>
+Open your domain controller and run through the Windows setup process  <br/>
 <img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
- Open your domain controller and run through the Windows setup process  <br/>
+Open your domain controller and run through the Windows setup process  <br/>
 <img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+Open your domain controller and run through the Windows setup process  <br/>
+<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
  
  Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
