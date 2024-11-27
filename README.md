@@ -61,16 +61,16 @@ Now its time to configure IP addressing for the internal network adapter. Go bac
 <img src="https://i.imgur.com/8pAzWPA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Select roles and features in the Server Manager  <br/>
+<img src="https://i.imgur.com/1uI1iLj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Selecting Active Directory Domain Services  <br/>
+<img src="https://i.imgur.com/AgcpvE2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+When prompted click install  <br/>
+<img src="https://i.imgur.com/u99ZJca.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Open your domain controller and run through the Windows setup process  <br/>
