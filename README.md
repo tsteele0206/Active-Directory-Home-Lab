@@ -81,8 +81,20 @@ I named my domain mydomain.com.  <br/>
 <img src="https://i.imgur.com/91undwL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+I created an organizational unit for administrators through Active Directory Users and Computers.  <br/>
+<img src="https://i.imgur.com/rvCl3r9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+I then created a user for myself within my _ADMINS O.U.  <br/>
+<img src="https://i.imgur.com/YK7v6Ob.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+I made my account a domain admin through my account properties.  <br/>
+<img src="https://i.imgur.com/ZrwSdcX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Next I need to install RAS/NAT so our Windows 10 host can comunicate effectively to the internet while being on its own virtual private network.  <br/>
+<img src="https://i.imgur.com/eyU8Ut1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Open your domain controller and run through the Windows setup process  <br/>
