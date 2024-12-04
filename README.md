@@ -33,7 +33,7 @@ Download an ISO for Windows 10. <br/>
 <img src="https://i.imgur.com/omzwuPD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-I created a VM for both the domain controller (Windows Server 2019) as well as a Windows client (Windows 10) and allocate appropriate resources to both. <br/>
+I created a VM for the domain controller (Windows Server 2019) and allocated appropriate resources. <br/>
 <img src="https://i.imgur.com/3zMBWme.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -95,6 +95,30 @@ I made my account a domain admin through my account properties.  <br/>
 <br />
 Next I need to install RAS/NAT so our Windows 10 host can comunicate effectively to the internet while being on its own virtual private network.  <br/>
 <img src="https://i.imgur.com/eyU8Ut1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Next I configure NAT so that all internal clients receive an internal private IP address.  <br/>
+<img src="https://i.imgur.com/3TPV9yK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+I then install a DHCP server to allocate IP addresses to internal clients.  <br/>
+<img src="https://i.imgur.com/s64c3uH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Next I set my DHCP scope to 172.16.0.100-200 with a subnet mask of 255.255.255.0. This will allow for 100 internal IP addresses.  <br/>
+<img src="https://i.imgur.com/wYGgrZf.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+I set this to the IP address of the domain controller as the NAT gateway is installed on the domain controller.  <br/>
+<img src="https://i.imgur.com/BF7jW5n.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Next I run a PowerShell script to create users from a previously generated names list. This creates a _USERS O.U. on the domain controller and creates the user accounts within that O.U. <br/>
+<img src="https://i.imgur.com/vLh5Mv1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+This is the result of the PowerShell script.  <br/>
+<img src="https://i.imgur.com/OpaSNq9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Open your domain controller and run through the Windows setup process  <br/>
