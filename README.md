@@ -41,7 +41,7 @@ In the Network Settings for the Domain Controller, I activated 2 adapters. I con
 <img src="https://i.imgur.com/s9A09pq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Opening the domain controller and running through the Windows setup process  <br/>
+Then I opened the domain controller and ran through the Windows setup process.  <br/>
 <img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -49,11 +49,11 @@ When I tried to navigate on the domain controller, I noticed that the VM will no
 <img src="https://i.imgur.com/xnFGdMT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
- Next I wanted to rename the adapters so I could differentiate between the two. So I opened Network Connections to show my active adapters. Right clicking on both and under properties revealed which adapter had the APIPA address, this being for the internal network. I renamed the remaining adapter for the external internet  <br/>
+ Next I wanted to rename the adapters so I could differentiate between the two. So I opened Network Connections to show my active adapters. Right clicking on both and under properties revealed which adapter had the APIPA address, this being for the internal network. I renamed the remaining adapter for the external internet.  <br/>
 <img src="https://i.imgur.com/ETUT1mB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
- I then went and renamed the computer "DC"  <br/>
+ I then went and renamed the computer "DC".  <br/>
 <img src="https://i.imgur.com/63vNhce.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -69,7 +69,7 @@ Selecting Active Directory Domain Services  <br/>
 <img src="https://i.imgur.com/AgcpvE2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-When prompted I clicked install  <br/>
+When prompted I clicked install.  <br/>
 <img src="https://i.imgur.com/u99ZJca.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -119,6 +119,26 @@ Next I run a PowerShell script to create users from a previously generated names
 <br />
 This is the result of the PowerShell script.  <br/>
 <img src="https://i.imgur.com/OpaSNq9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Now that everything is set up on the DC, its time to create a Windows 10 Client VM. I created the VM using the ISO file I downloaded previously. I allocated 4GB of memory and 4 CPU cores.  <br/>
+<img src="https://i.imgur.com/JKILbge.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Next before starting the VM I opened the network settings for the VM and changed the adapter settings from NAT to "internal network". This will allow the VM to obtain an IP address from the DHCP server on the DC rather than reaching out to my home router.  <br/>
+<img src="https://i.imgur.com/FNjZzi3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Open your domain controller and run through the Windows setup process  <br/>
+<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Open your domain controller and run through the Windows setup process  <br/>
+<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Open your domain controller and run through the Windows setup process  <br/>
+<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Open your domain controller and run through the Windows setup process  <br/>
