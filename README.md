@@ -129,22 +129,27 @@ Next before starting the VM I opened the network settings for the VM and changed
 <img src="https://i.imgur.com/FNjZzi3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Now I run through the Windows 10 setup process, making sure to select Windows 10 Pro when asked which edition I want to install.  <br/>
+<img src="https://i.imgur.com/D0yWdFx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Now on the DC, I want to enable the router under Server Settings in the DHCP menu as well as set the server IP address as the default gateway. This will allow the client to obtain a IP address from the domain controller as well as use the domain controller as its default gateway.  <br/>
+<img src="https://i.imgur.com/xmlVqNH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+This is showing that the client has successfully connected to the DHCP server on the domain controller. The first ipconfig I had ran wasnt showing a default gateway but the second one shows the IP address of the domain controller. Next I ran a ping to google.com to test the connectivity to the internet and I received responses. This shows that our DNS is working as google.com resolved to the correct IP address. This also shows that our router on our domain controller is successfully passing our traffic to the internet.  <br/>
+<img src="https://i.imgur.com/0Umk2cs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Open your domain controller and run through the Windows setup process  <br/>
-<img src="https://i.imgur.com/O1x2G1b.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Next on the client I rename the computer "CLIENT1" as well as join "mydomain.com".  <br/>
+<img src="https://i.imgur.com/1PcYUuH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+Now when I select log in as "Other User" on the client it gives me the option to log into a domain account. This means I can log in using any user on the list of accounts I created previously using the PowerShell script.  <br/>
+<img src="https://i.imgur.com/uWOLgyC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
 
  
  Observe the wiped disk:  <br/>
