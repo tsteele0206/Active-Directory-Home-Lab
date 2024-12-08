@@ -1,9 +1,8 @@
 <h1>Active Directory Home Lab</h1>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+In this project I am attempting to create an Active Directory domain to simulate a corporate network using Oracle Virtualbox as well as a Windows Server 2019 ISO and a Windows 10 ISO. I will create a list of users using a PowerShell script on the domain controller and the Windows 10 client will be able to log in as any of them. This environment will be useful to me for upcoming labs.
 <br />
 
 
@@ -150,11 +149,6 @@ Now when I select log in as "Other User" on the client it gives me the option to
 <br />
 <br />
 
-
- 
- Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 
 <!--
  ```diff
