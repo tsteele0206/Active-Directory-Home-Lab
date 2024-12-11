@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-In this project I am attempting to create an Active Directory domain to simulate a corporate network using Oracle Virtualbox as well as a Windows Server 2019 ISO and a Windows 10 ISO. I will create a list of users using a PowerShell script on the domain controller and the Windows 10 client will be able to log in as any of them. This environment will be useful to me for upcoming labs.
+In this project I am attempting to create an Active Directory domain to simulate a corporate network using Oracle Virtualbox as well as a Windows Server 2019 ISO and a Windows 10 ISO. I will create a list of users using a PowerShell script on the domain controller. I will add the Windows 10 client to the domain and it will be able to log in as any of the users on said list. This environment will be useful to me for upcoming labs as well as to familiarize myself with Active Directory.
 <br />
 
 
